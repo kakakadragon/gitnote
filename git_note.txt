@@ -1,0 +1,51 @@
+1、git -v	//查看git版本号
+
+2、配置git的name email
+git config --global user.name "kaka"
+git config --global user.email "teethprivilege@gmail.com"
+
+3、使用
+git status	//查看当前仓库状态
+git init	//当前文件初始化仓库
+4、基本操作
+未跟踪。
+
+已跟踪：
+暂存：文件修改已经保存，没有提交仓库
+未修改：磁盘文件和仓库文件一样
+已修改：磁盘文件已修改，和仓库文件不一样
+
+新建文件属于未跟踪。
+未跟踪-->暂存：git add <filename>	git add *	//add命令既可以未跟踪-->暂存，也可以已跟踪-->暂存。总之，将add理解成暂存
+暂存-->未修改：git commit -m "注释信息"
+未修改-->已修改：敲代码
+
+git log	//查看历史提交，按q退出
+git commit -a -m "注释信息"	//未跟踪文件不会提交
+
+4、常用命令
+git restore <filename>	git restore *	//重置文件
+git restore --staged <filename>		//取消暂存
+git rm <filename> -f				//强制删除
+git rm --cached <filename>			//变成未跟踪
+git reset --hard HEAD			//撤销修改，回到当前版本
+
+变基和合并都需要手动处理冲突，结果是一样的。不同的是变基更简洁
+5、分支
+git branch			//查询分支
+git branch <branch_name>	//新建分支
+git branch -d <branch_name>	//删除分支
+git switch <branch_name>	//切换分支
+git switch -c <branch_name>	//新建并切换分支
+
+6、变基
+git rebase <branch_name>
+
+7、远程仓库
+本地传到远程：
+git remote add origin https://github.com/kakakadragon/gitdemo.git	//origin一致
+git branch -M main
+git push -u origin main					//origin 一致
+
+git remote add <remote_name> <url>				//关联远程仓库
+git push -u <remote_name> <branch_name> 			//推送代码
