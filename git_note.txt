@@ -16,7 +16,7 @@ git init	//当前文件初始化仓库
 已修改：磁盘文件已修改，和仓库文件不一样
 
 新建文件属于未跟踪。
-未跟踪-->暂存：git add <filename>	git add *	//add命令既可以未跟踪-->暂存，也可以已跟踪-->暂存。总之，将add理解成暂存
+未跟踪/已跟踪-->暂存：git add <filename>	git add *
 暂存-->未修改：git commit -m "注释信息"
 未修改-->已修改：敲代码
 
@@ -49,3 +49,12 @@ git push -u origin main					//origin 一致
 
 git remote add <remote_name> <url>				//关联远程仓库
 git push -u <remote_name> <branch_name> 			//推送代码
+git clone <url>						//从远程下载至本地
+git fetch							//拉取然后必须手动合并
+git merge origin/master
+git本地版本低于远程，则会push失败。要先确保本地和远程版本一致。
+git pull							//拉取然后自动合并
+
+8、标签
+git switch -c <branch_name> <id_name>
+git tag <tag_name> 	<id_name>				
