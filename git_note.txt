@@ -57,4 +57,7 @@ git pull							//拉取然后自动合并
 
 8、标签
 git switch -c <branch_name> <id_name>
-git tag <tag_name> 	<id_name>				
+git tag <tag_name> 	<id_name>	
+
+9、.gitignore
+touch .gitignore
